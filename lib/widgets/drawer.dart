@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:starr_front_end/helpers/style.dart';
 
+import '../pages/artists/artists.dart';
+
 class MobileMenu extends StatelessWidget {
   const MobileMenu({Key key}) : super(key: key);
 
@@ -18,7 +20,7 @@ class MobileMenu extends StatelessWidget {
               InkWell(
                 onTap: () {},
                 child: Text(
-                  'Pricing',
+                  'Looking for a opportunity',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),
@@ -27,9 +29,11 @@ class MobileMenu extends StatelessWidget {
                 child: Divider(),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.restorablePushNamed(context, Artists.routeName);
+                },
                 child: Text(
-                  'Login',
+                  'Looking for artists',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),
@@ -37,7 +41,7 @@ class MobileMenu extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Text(
-                    'Copyright © 2020 | Santos Enoque',
+                    'Copyright © 2020 | Starr',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,

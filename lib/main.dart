@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:starr_front_end/pages/artists/artists.dart';
 import 'package:starr_front_end/pages/home/home.dart';
 
 void main() {
@@ -14,6 +15,19 @@ class MyApp extends StatelessWidget {
       title: 'Starr',
       theme: ThemeData(visualDensity: VisualDensity.adaptivePlatformDensity),
       home: HomePage(),
+      onGenerateRoute: (RouteSettings routeSettings) {
+        return MaterialPageRoute<void>(
+          settings: routeSettings,
+          builder: (BuildContext context) {
+            switch (routeSettings.name) {
+              case Artists.routeName:
+                return Artists();
+              default:
+                return HomePage();
+            }
+          },
+        );
+      },
     );
   }
 }

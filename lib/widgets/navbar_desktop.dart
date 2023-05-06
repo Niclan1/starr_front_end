@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:starr_front_end/helpers/style.dart';
 import 'package:starr_front_end/widgets/button.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '../pages/artists/artists.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -59,7 +61,7 @@ class _NavBarState extends State<NavBar> {
                             height: 12,
                           ),
                           Text(
-                            'Pricing',
+                            'Looking for a opportunity',
                             style: GoogleFonts.roboto(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -93,7 +95,10 @@ class _NavBarState extends State<NavBar> {
                         });
                       },
                       hoverColor: Colors.transparent,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.restorablePushNamed(
+                            context, Artists.routeName);
+                      },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -101,7 +106,7 @@ class _NavBarState extends State<NavBar> {
                             height: 12,
                           ),
                           Text(
-                            'Log In',
+                            'Looking for artists',
                             style: GoogleFonts.roboto(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,

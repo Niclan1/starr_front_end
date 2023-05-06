@@ -121,7 +121,7 @@ class WideScreen extends StatelessWidget {
                     height: screenSize.width / 28,
                   ),
                   Image.asset(
-                    "assets/images/img.png",
+                    "assets/images/model-yellow-gradient.png",
                     width: screenSize.width / 1.9,
                   ),
                 ],
