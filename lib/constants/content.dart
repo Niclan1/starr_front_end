@@ -1,0 +1,1 @@
+const mainParagraph = "You’re more than just a photo, bio, piece of paper. You have ";
